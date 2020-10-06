@@ -4,23 +4,6 @@ Rails.application.routes.draw do
   # yung namespace
   get   '/admin/dashboard',      to: 'admin/dashboard#show', as: 'admin_dashboard'
 
-  get   '/admin/items',          to: 'admin/items#index',    as: 'admin_items'
-  get   '/admin/items/new',      to: 'admin/items#new',      as: 'new_admin_item'
-  get   '/admin/items/:id/edit', to: 'admin/items#edit',     as: 'edit_admin_item'
-  get   '/admin/items/:id',      to: 'admin/items#show',     as: 'admin_item'
-  post  '/admin/items',          to: 'admin/items#create'
-  patch '/admin/items/:id',      to: 'admin/items#update'
-  put   '/admin/items/:id',      to: 'admin/items#update'
-
-  get   'admin/users/:id',      to: 'admin/users#show',  as: 'admin_user'
-  get   'admin/users/:id/edit', to: 'admin/users#edit',  as: 'edit_admin_user'
-  patch '/admin/users/:id',     to: 'admin/users#update'
-  put   '/admin/users/:id',     to: 'admin/users#update'
-
-  get 'admin/ordered',   to: 'admin/orders#index', as: 'admin_ordered'
-  get 'admin/paid',      to: 'admin/orders#index', as: 'admin_paid'
-  get 'admin/cancelled', to: 'admin/orders#index', as: 'admin_cancelled'
-  get 'admin/completed', to: 'admin/orders#index', as: 'admin_completed'
 
   # session
   get    '/login',  to: 'sessions#new'
