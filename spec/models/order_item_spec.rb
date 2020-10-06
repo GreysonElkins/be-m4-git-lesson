@@ -22,6 +22,7 @@ describe OrderItem do
       category = create(:category)
       item = create(:item, category: category, price: 4.00)
       user = create(:user)
+
       order = create(:order, user: user)
       OrderItem.create(order: order, item: item)
       OrderItem.create(order: order, item: item)
